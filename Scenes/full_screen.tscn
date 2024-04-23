@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd1bhq8doge6f"]
+
+[ext_resource type="Script" path="res://Scripts/fullScreen.gd" id="1_jlugi"]
+[ext_resource type="Texture2D" uid="uid://dpq6kk7xusadx" path="res://assets/BG.jpeg" id="2_tfvu2"]
+[ext_resource type="PackedScene" uid="uid://cq1o25sxsv8rj" path="res://Scenes/ui_icon.tscn" id="3_70spr"]
+[ext_resource type="Texture2D" uid="uid://cri1ddj8i86we" path="res://assets/icon_store.png" id="4_jo500"]
+[ext_resource type="Texture2D" uid="uid://cr7bngfckx263" path="res://assets/icon_mod.png" id="5_0nfmg"]
+
+[node name="FullScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1320.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jlugi")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_tfvu2")
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+
+[node name="ac" parent="GridContainer" instance=ExtResource("3_70spr")]
+layout_mode = 2
+texture_normal = ExtResource("4_jo500")
+windowScene = "res://Scenes/main_window.tscn"
+iconName = "awesome calculator"
+
+[node name="acm" parent="GridContainer" instance=ExtResource("3_70spr")]
+layout_mode = 2
+texture_normal = ExtResource("5_0nfmg")
+windowScene = "res://Scenes/modded_window.tscn"
+iconName = "awesome calculator mod"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq1o25sxsv8rj"]
+
+[ext_resource type="Script" path="res://Scripts/iconScript.gd" id="1_0hakl"]
+
+[node name="UI Icon" type="TextureButton"]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_0hakl")
+
+[node name="name" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = -20.0
+offset_top = 80.0
+offset_right = 100.0
+offset_bottom = 160.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.235294)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/outline_size = 8
+bbcode_enabled = true
+text = "[center]sample text[/center]"
+fit_content = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

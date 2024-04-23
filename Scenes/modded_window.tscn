@@ -1,24 +1,24 @@
-[gd_scene load_steps=33 format=3 uid="uid://blysrdlx5eonv"]
+[gd_scene load_steps=33 format=3 uid="uid://cjfquhfyiqntx"]
 
-[ext_resource type="Script" path="res://Scripts/mainScript.gd" id="1_y0sr0"]
-[ext_resource type="AudioStream" uid="uid://jq7232ogh2id" path="res://assets/audio/loop.mp3" id="2_cabr8"]
-[ext_resource type="AudioStream" uid="uid://ctkww2cb68ij2" path="res://assets/audio/build up.mp3" id="2_pnj31"]
-[ext_resource type="Shader" path="res://shaders/main_window.gdshader" id="2_u8km4"]
-[ext_resource type="Shader" path="res://shaders/textfloat.gdshader" id="3_wsc84"]
-[ext_resource type="Theme" uid="uid://ccm30crfj0bt3" path="res://theme/def theme.tres" id="4_7m4et"]
-[ext_resource type="Texture2D" uid="uid://ccaovxfm1hlty" path="res://assets/icon_color_outline.png" id="4_e8t6l"]
-[ext_resource type="FontFile" uid="uid://byv54r16r83xw" path="res://assets/fonts/Comic Sans MS.ttf" id="4_qi44k"]
-[ext_resource type="Texture2D" uid="uid://dkunq3hxi8qel" path="res://assets/cupanidle.png" id="5_ug8hw"]
-[ext_resource type="Texture2D" uid="uid://gfwverdlvrb2" path="res://assets/settingsicon.png" id="8_s3e8v"]
-[ext_resource type="Script" path="res://Scripts/settingsWindow.gd" id="14_540og"]
-[ext_resource type="Texture2D" uid="uid://bl0b1w1sgrmqd" path="res://assets/cantalope.png" id="15_ci6dk"]
-[ext_resource type="Shader" path="res://shaders/pixelate.gdshader" id="16_jsaha"]
-[ext_resource type="Theme" uid="uid://omxrn8usvpae" path="res://theme/quickbtn.tres" id="17_06bn0"]
-[ext_resource type="Texture2D" uid="uid://wpguemih2xei" path="res://assets/arrowBack.png" id="18_1th4f"]
-[ext_resource type="AudioStream" uid="uid://bhr7kxp6y3ma3" path="res://assets/audio/drop.mp3" id="19_gok2i"]
+[ext_resource type="Script" path="res://Scripts/moddedScript.gd" id="1_l65ms"]
+[ext_resource type="Shader" path="res://shaders/main_window.gdshader" id="2_27hw7"]
+[ext_resource type="Shader" path="res://shaders/textfloat.gdshader" id="3_8e06r"]
+[ext_resource type="FontFile" uid="uid://byv54r16r83xw" path="res://assets/fonts/Comic Sans MS.ttf" id="4_42sig"]
+[ext_resource type="Theme" uid="uid://ccm30crfj0bt3" path="res://theme/def theme.tres" id="5_a04r4"]
+[ext_resource type="AudioStream" uid="uid://ctkww2cb68ij2" path="res://assets/audio/build up.mp3" id="6_o76tx"]
+[ext_resource type="AudioStream" uid="uid://jq7232ogh2id" path="res://assets/audio/loop.mp3" id="7_74ur1"]
+[ext_resource type="AudioStream" uid="uid://bhr7kxp6y3ma3" path="res://assets/audio/drop.mp3" id="8_etjei"]
+[ext_resource type="Texture2D" uid="uid://gfwverdlvrb2" path="res://assets/settingsicon.png" id="9_4fugs"]
+[ext_resource type="Texture2D" uid="uid://bl0b1w1sgrmqd" path="res://assets/cantalope.png" id="10_wrubg"]
+[ext_resource type="Shader" path="res://shaders/pixelate.gdshader" id="11_tdnst"]
+[ext_resource type="Theme" uid="uid://omxrn8usvpae" path="res://theme/quickbtn.tres" id="12_c01ch"]
+[ext_resource type="Texture2D" uid="uid://wpguemih2xei" path="res://assets/arrowBack.png" id="13_4lpwo"]
+[ext_resource type="Script" path="res://Scripts/settingsWindow.gd" id="14_jk52u"]
+[ext_resource type="Texture2D" uid="uid://ccaovxfm1hlty" path="res://assets/icon_color_outline.png" id="15_t62kx"]
+[ext_resource type="Texture2D" uid="uid://dkunq3hxi8qel" path="res://assets/cupanidle.png" id="16_6ct3q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5k35g"]
-shader = ExtResource("2_u8km4")
+shader = ExtResource("2_27hw7")
 shader_parameter/strength = 0.665
 shader_parameter/speed = 0.3
 shader_parameter/angle = 122.637
@@ -32,19 +32,19 @@ gradient = SubResource("Gradient_0di1y")
 fill_to = Vector2(1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5kivu"]
-shader = ExtResource("3_wsc84")
+shader = ExtResource("3_8e06r")
 shader_parameter/height = 5.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4bfu3"]
-shader = ExtResource("3_wsc84")
+shader = ExtResource("3_8e06r")
 shader_parameter/height = 2.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m4uvf"]
-shader = ExtResource("3_wsc84")
+shader = ExtResource("3_8e06r")
 shader_parameter/height = 2.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ervhw"]
-shader = ExtResource("3_wsc84")
+shader = ExtResource("3_8e06r")
 shader_parameter/height = 2.0
 
 [sub_resource type="Animation" id="Animation_8y0qu"]
@@ -116,7 +116,7 @@ _data = {
 resource_local_to_scene = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x1v5k"]
-shader = ExtResource("16_jsaha")
+shader = ExtResource("11_tdnst")
 shader_parameter/pixel_size = 2.0
 
 [sub_resource type="Animation" id="Animation_2uxv3"]
@@ -158,11 +158,11 @@ _data = {
 }
 
 [node name="Control" type="Window" node_paths=PackedStringArray("transitionTexture", "settingsWindow", "resultsWindow", "operatorButton", "settingsButton", "answerButton", "NumField1", "creditsButton", "BackButton", "loopAudio", "buildUpAudio", "dropAudio", "colorRect", "cupanAnim", "resultsRichLabel", "cantalpope")]
-title = "awesome_calculator.exe"
+title = "awesome_calculator_mod.exe"
 initial_position = 1
 size = Vector2i(600, 600)
 unresizable = true
-script = ExtResource("1_y0sr0")
+script = ExtResource("1_l65ms")
 transitionTexture = NodePath("transitionAnimation")
 settingsWindow = NodePath("settingsWindow")
 resultsWindow = NodePath("results")
@@ -177,7 +177,7 @@ buildUpAudio = NodePath("buildupAudio")
 dropAudio = NodePath("dropAudio")
 colorRect = NodePath("transitionAnimation/ColorRect")
 cupanAnim = NodePath("settingsWindow/cupan/cupanAnim")
-resultsRichLabel = NodePath("results/resultsText")
+resultsRichLabel = NodePath("results/VBoxContainer/resultsText")
 cantalpope = NodePath("results/cantalpope")
 
 [node name="rainbowBackground" type="TextureRect" parent="."]
@@ -212,20 +212,19 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -250.0
-offset_top = 14.0
 offset_right = 250.0
-offset_bottom = 211.0
+offset_bottom = 197.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.152941)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 9
 theme_override_constants/outline_size = 20
-theme_override_fonts/normal_font = ExtResource("4_qi44k")
+theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
-text = "[rainbow freq=0.3 sat=0.9 val=1][center][wave amp=50.0 freq=5.0 connected=1]Awesome
-Calculator[/wave][/center][/rainbow]"
+text = "[rainbow freq=0.3 sat=0.9 val=1][center][wave amp=50.0 freq=5.0 connected=1]awesome
+calculator mod[/wave][/center][/rainbow]"
 scroll_active = false
 autowrap_mode = 0
 
@@ -236,15 +235,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -283.0
-offset_top = -31.0
-offset_right = -193.0
-offset_bottom = 29.0
+offset_top = -80.0
+offset_right = -223.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_top = NodePath("../settingsButton")
 focus_neighbor_right = NodePath("../1stNumField2")
 focus_next = NodePath("../1stNumField2")
-theme = ExtResource("4_7m4et")
+theme = ExtResource("5_a04r4")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 item_count = 10
@@ -277,18 +276,62 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.0
-offset_top = -31.0
-offset_right = -95.0
-offset_bottom = 29.0
+offset_left = -210.0
+offset_top = -80.0
+offset_right = -150.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath("../1stNumField1")
 focus_neighbor_top = NodePath("../settingsButton")
+focus_neighbor_right = NodePath("../1stNumField3")
+focus_next = NodePath("../1stNumField3")
+focus_previous = NodePath("../1stNumField1")
+theme = ExtResource("5_a04r4")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+item_count = 10
+selected = 0
+allow_reselect = true
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "5"
+popup/item_5/id = 5
+popup/item_6/text = "6"
+popup/item_6/id = 6
+popup/item_7/text = "7"
+popup/item_7/id = 7
+popup/item_8/text = "8"
+popup/item_8/id = 8
+popup/item_9/text = "9"
+popup/item_9/id = 9
+
+[node name="1stNumField3" type="OptionButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -80.0
+offset_right = -75.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../1stNumField2")
+focus_neighbor_top = NodePath("../settingsButton")
 focus_neighbor_right = NodePath("../operator")
 focus_next = NodePath("../operator")
 focus_previous = NodePath("../1stNumField1")
-theme = ExtResource("4_7m4et")
+theme = ExtResource("5_a04r4")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 item_count = 10
@@ -321,21 +364,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.9995
-offset_top = -30.0
-offset_right = 44.9995
-offset_bottom = 30.0
+offset_left = -30.0
+offset_top = -80.0
+offset_right = 30.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_left = NodePath("../1stNumField2")
+focus_neighbor_left = NodePath("../1stNumField3")
 focus_neighbor_top = NodePath("../settingsButton")
-focus_neighbor_right = NodePath("../2ndNumField1")
-focus_next = NodePath("../2ndNumField1")
-focus_previous = NodePath("../1stNumField2")
-theme = ExtResource("4_7m4et")
+focus_previous = NodePath("../1stNumField3")
+theme = ExtResource("5_a04r4")
 theme_override_font_sizes/font_size = 30
 alignment = 1
-item_count = 5
+item_count = 6
 selected = 0
 allow_reselect = true
 popup/item_0/text = "+"
@@ -348,6 +389,8 @@ popup/item_3/text = "/"
 popup/item_3/id = 3
 popup/item_4/text = "^"
 popup/item_4/id = 4
+popup/item_5/text = "%"
+popup/item_5/id = 5
 
 [node name="2ndNumField1" type="OptionButton" parent="."]
 anchors_preset = 8
@@ -355,18 +398,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 100.0
-offset_top = -30.0
-offset_right = 190.0
-offset_bottom = 30.0
+offset_left = 75.0
+offset_top = -80.0
+offset_right = 135.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_left = NodePath("../operator")
 focus_neighbor_top = NodePath("../settingsButton")
 focus_neighbor_right = NodePath("../2ndNumField2")
 focus_next = NodePath("../2ndNumField2")
-focus_previous = NodePath("../operator")
-theme = ExtResource("4_7m4et")
+theme = ExtResource("5_a04r4")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 item_count = 10
@@ -399,16 +440,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 198.0
-offset_top = -30.0
-offset_right = 288.0
-offset_bottom = 30.0
+offset_left = 150.0
+offset_top = -80.0
+offset_right = 210.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath("../2ndNumField1")
 focus_neighbor_top = NodePath("../settingsButton")
+focus_neighbor_right = NodePath("../2ndNumField3")
+focus_next = NodePath("../2ndNumField3")
 focus_previous = NodePath("../2ndNumField1")
-theme = ExtResource("4_7m4et")
+theme = ExtResource("5_a04r4")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 item_count = 10
@@ -435,6 +478,85 @@ popup/item_8/id = 8
 popup/item_9/text = "9"
 popup/item_9/id = 9
 
+[node name="2ndNumField3" type="OptionButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 225.0
+offset_top = -80.0
+offset_right = 285.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../2ndNumField2")
+focus_neighbor_top = NodePath("../settingsButton")
+focus_neighbor_right = NodePath("../operator")
+focus_next = NodePath("../operator")
+focus_previous = NodePath("../2ndNumField1")
+theme = ExtResource("5_a04r4")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+item_count = 10
+selected = 0
+allow_reselect = true
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "5"
+popup/item_5/id = 5
+popup/item_6/text = "6"
+popup/item_6/id = 6
+popup/item_7/text = "7"
+popup/item_7/id = 7
+popup/item_8/text = "8"
+popup/item_8/id = 8
+popup/item_9/text = "9"
+popup/item_9/id = 9
+
+[node name="roundto" type="OptionButton" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = 40.0
+offset_right = 65.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../1stNumField3")
+focus_neighbor_top = NodePath("../settingsButton")
+focus_previous = NodePath("../1stNumField3")
+theme = ExtResource("5_a04r4")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+item_count = 6
+selected = 0
+allow_reselect = true
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "go nuts"
+popup/item_5/id = 5
+
 [node name="dropdownDescriptions" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
@@ -452,13 +574,13 @@ grow_vertical = 2
 [node name="firstDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_4bfu3")
 layout_mode = 0
-offset_left = 18.0
-offset_top = 343.0
-offset_right = 204.0
-offset_bottom = 387.0
+offset_left = 30.0
+offset_top = 280.0
+offset_right = 216.0
+offset_bottom = 324.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("4_qi44k")
+theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   first number[/tornado]"
@@ -467,42 +589,60 @@ scroll_active = false
 [node name="operatorDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_m4uvf")
 layout_mode = 0
-offset_left = 238.0
-offset_top = 343.0
-offset_right = 365.0
-offset_bottom = 387.0
+offset_left = 230.0
+offset_top = 280.0
+offset_right = 357.0
+offset_bottom = 324.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("4_qi44k")
+theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  operator[/tornado]"
+fit_content = true
 scroll_active = false
 
 [node name="secondDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_ervhw")
 layout_mode = 0
-offset_left = 412.0
-offset_top = 343.0
-offset_right = 574.0
-offset_bottom = 402.0
+offset_left = 380.0
+offset_top = 280.0
+offset_right = 580.0
+offset_bottom = 339.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("4_qi44k")
+theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   2nd number[/tornado]"
+text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   the second one[/tornado]"
+scroll_active = false
+
+[node name="roundtoDesc" type="RichTextLabel" parent="dropdownDescriptions"]
+visible = false
+material = SubResource("ShaderMaterial_m4uvf")
+layout_mode = 0
+offset_left = 175.0
+offset_top = 400.0
+offset_right = 425.0
+offset_bottom = 444.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("4_42sig")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  round to this decimal[/tornado]"
+fit_content = true
 scroll_active = false
 
 [node name="buildupAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_pnj31")
+stream = ExtResource("6_o76tx")
 
 [node name="loopAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_cabr8")
+stream = ExtResource("7_74ur1")
 autoplay = true
 
 [node name="dropAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_gok2i")
+stream = ExtResource("8_etjei")
 
 [node name="transitionAnimation" type="AnimationPlayer" parent="."]
 libraries = {
@@ -524,8 +664,8 @@ offset_right = 55.0
 offset_bottom = 55.0
 focus_neighbor_bottom = NodePath("../1stNumField1")
 focus_previous = NodePath("../1stNumField1")
-theme = ExtResource("4_7m4et")
-icon = ExtResource("8_s3e8v")
+theme = ExtResource("5_a04r4")
+icon = ExtResource("9_4fugs")
 icon_alignment = 1
 
 [node name="results" type="Control" parent="."]
@@ -545,32 +685,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="resultsText" type="RichTextLabel" parent="results"]
-modulate = Color(0, 0, 0, 1)
-material = SubResource("ShaderMaterial_ccg75")
+[node name="VBoxContainer" type="VBoxContainer" parent="results"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -47.995
-offset_right = 300.0
-offset_bottom = 300.505
+offset_left = -240.0
+offset_top = -260.0
+offset_right = 240.0
+offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+
+[node name="resultsText" type="RichTextLabel" parent="results/VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_ccg75")
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_left = NodePath("../backButton")
-focus_neighbor_top = NodePath("../backButton")
-focus_neighbor_right = NodePath("../backButton")
-focus_previous = NodePath("../backButton")
+focus_neighbor_left = NodePath("../../backButton")
+focus_neighbor_top = NodePath("../../backButton")
+focus_neighbor_right = NodePath("../../backButton")
+focus_previous = NodePath("../../backButton")
 focus_mode = 2
 theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 60
 bbcode_enabled = true
 text = "[center]0000[/center]"
+fit_content = true
 
 [node name="cantalpope" type="TextureRect" parent="results"]
 visible = false
@@ -587,7 +733,7 @@ offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("15_ci6dk")
+texture = ExtResource("10_wrubg")
 
 [node name="ColorRect" type="ColorRect" parent="results"]
 material = SubResource("ShaderMaterial_x1v5k")
@@ -604,13 +750,13 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 58.0
 offset_bottom = 58.0
-focus_neighbor_right = NodePath("../resultsText")
-focus_neighbor_bottom = NodePath("../resultsText")
-focus_next = NodePath("../resultsText")
-focus_previous = NodePath("../resultsText")
-theme = ExtResource("17_06bn0")
+focus_neighbor_right = NodePath("../VBoxContainer/resultsText")
+focus_neighbor_bottom = NodePath("../VBoxContainer/resultsText")
+focus_next = NodePath("../VBoxContainer/resultsText")
+focus_previous = NodePath("../VBoxContainer/resultsText")
+theme = ExtResource("12_c01ch")
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-icon = ExtResource("18_1th4f")
+icon = ExtResource("13_4lpwo")
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -622,7 +768,7 @@ size = Vector2i(440, 225)
 visible = false
 unresizable = true
 always_on_top = true
-script = ExtResource("14_540og")
+script = ExtResource("14_jk52u")
 
 [node name="rainbowBackground" type="TextureRect" parent="settingsWindow"]
 self_modulate = Color(0, 0, 0, 1)
@@ -670,7 +816,7 @@ offset_top = 112.835
 offset_right = 400.196
 offset_bottom = 154.835
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_e8t6l")
+texture = ExtResource("15_t62kx")
 
 [node name="creditsButton" type="Button" parent="settingsWindow"]
 anchors_preset = 2
@@ -690,7 +836,7 @@ text = "song:  DEAF KEV - Invincible"
 [node name="cupan" type="Sprite2D" parent="settingsWindow"]
 texture_filter = 1
 position = Vector2(312.1, 68.75)
-texture = ExtResource("5_ug8hw")
+texture = ExtResource("16_6ct3q")
 hframes = 3
 
 [node name="cupanAnim" type="AnimationPlayer" parent="settingsWindow/cupan"]
@@ -707,12 +853,15 @@ one_shot = true
 [connection signal="pressed" from="answerButton" to="." method="_on_answer_button_pressed"]
 [connection signal="item_selected" from="1stNumField1" to="." method="_on_st_num_field_1_item_selected"]
 [connection signal="item_selected" from="1stNumField2" to="." method="_on_st_num_field_2_item_selected"]
+[connection signal="item_selected" from="1stNumField3" to="." method="_on_st_num_field_3_item_selected"]
 [connection signal="item_selected" from="operator" to="." method="_on_operator_item_selected"]
 [connection signal="item_selected" from="2ndNumField1" to="." method="_on_nd_num_field_1_item_selected"]
 [connection signal="item_selected" from="2ndNumField2" to="." method="_on_nd_num_field_2_item_selected"]
+[connection signal="item_selected" from="2ndNumField3" to="." method="_on_nd_num_field_3_item_selected"]
+[connection signal="item_selected" from="roundto" to="." method="_on_roundto_item_selected"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="results/backButton" to="." method="_on_back_button_pressed"]
 [connection signal="close_requested" from="settingsWindow" to="." method="_on_settings_window_close_requested"]
-[connection signal="pressed" from="settingsWindow/creditsButton" to="settingsWindow/creditsButton" method="_on_pressed"]
 [connection signal="pressed" from="settingsWindow/creditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="settingsWindow/creditsButton" to="settingsWindow/creditsButton" method="_on_pressed"]
 [connection signal="timeout" from="dropTimer" to="." method="_on_drop_timer_timeout"]
