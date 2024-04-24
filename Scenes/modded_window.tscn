@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cjfquhfyiqntx"]
+[gd_scene load_steps=42 format=3 uid="uid://cjfquhfyiqntx"]
 
 [ext_resource type="Script" path="res://Scripts/moddedScript.gd" id="1_l65ms"]
 [ext_resource type="Shader" path="res://shaders/main_window.gdshader" id="2_27hw7"]
@@ -16,6 +16,14 @@
 [ext_resource type="Script" path="res://Scripts/settingsWindow.gd" id="14_jk52u"]
 [ext_resource type="Texture2D" uid="uid://ccaovxfm1hlty" path="res://assets/icon_color_outline.png" id="15_t62kx"]
 [ext_resource type="Texture2D" uid="uid://dkunq3hxi8qel" path="res://assets/cupanidle.png" id="16_6ct3q"]
+[ext_resource type="Texture2D" uid="uid://cf7w5cs674c1v" path="res://assets/epixium anim/breakdance3.png" id="17_f1it0"]
+[ext_resource type="Texture2D" uid="uid://dvod2aagaggao" path="res://assets/epixium anim/breakdance4.png" id="18_eqsn1"]
+[ext_resource type="Texture2D" uid="uid://dtfuec5p6dhq8" path="res://assets/epixium anim/breakdance5.png" id="19_j8vco"]
+[ext_resource type="Texture2D" uid="uid://ni6jrjj125rr" path="res://assets/epixium anim/breakdance6.png" id="20_57bwg"]
+[ext_resource type="Texture2D" uid="uid://b3xve61lby6i5" path="res://assets/epixium anim/breakdance7.png" id="21_yjc7e"]
+[ext_resource type="Texture2D" uid="uid://l4s81vs06ftn" path="res://assets/epixium anim/breakdance8.png" id="22_a4std"]
+[ext_resource type="Texture2D" uid="uid://r41vtc2mflil" path="res://assets/epixium anim/breakdance9.png" id="23_tgvrs"]
+[ext_resource type="Texture2D" uid="uid://bcye84upk606n" path="res://assets/epixium anim/breakdance10.png" id="24_067en"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5k35g"]
 shader = ExtResource("2_27hw7")
@@ -157,7 +165,39 @@ _data = {
 "idle": SubResource("Animation_s85oi")
 }
 
-[node name="Control" type="Window" node_paths=PackedStringArray("transitionTexture", "settingsWindow", "resultsWindow", "operatorButton", "settingsButton", "answerButton", "NumField1", "creditsButton", "BackButton", "loopAudio", "buildUpAudio", "dropAudio", "colorRect", "cupanAnim", "resultsRichLabel", "cantalpope")]
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4d72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_f1it0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_eqsn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j8vco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_57bwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yjc7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_a4std")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tgvrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_067en")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[node name="Control" type="Window" node_paths=PackedStringArray("transitionTexture", "settingsWindow", "resultsWindow", "operatorButton", "settingsButton", "answerButton", "NumField1", "creditsButton", "BackButton", "loopAudio", "buildUpAudio", "dropAudio", "colorRect", "cupanAnim", "epixiumAnim", "resultsRichLabel", "cantalpope")]
 title = "awesome_calculator_mod.exe"
 initial_position = 1
 size = Vector2i(600, 600)
@@ -177,6 +217,7 @@ buildUpAudio = NodePath("buildupAudio")
 dropAudio = NodePath("dropAudio")
 colorRect = NodePath("transitionAnimation/ColorRect")
 cupanAnim = NodePath("settingsWindow/cupan/cupanAnim")
+epixiumAnim = NodePath("settingsWindow/epixium")
 resultsRichLabel = NodePath("results/VBoxContainer/resultsText")
 cantalpope = NodePath("results/cantalpope")
 
@@ -574,63 +615,62 @@ grow_vertical = 2
 [node name="firstDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_4bfu3")
 layout_mode = 0
-offset_left = 30.0
+offset_left = 20.0
 offset_top = 280.0
-offset_right = 216.0
+offset_right = 206.0
 offset_bottom = 324.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   first number[/tornado]"
+text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   first number[/tornado][/center]"
 scroll_active = false
 
 [node name="operatorDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_m4uvf")
 layout_mode = 0
-offset_left = 230.0
+offset_left = 215.0
 offset_top = 280.0
-offset_right = 357.0
+offset_right = 365.0
 offset_bottom = 324.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  operator[/tornado]"
+text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  operator[/tornado][/center]"
 fit_content = true
 scroll_active = false
 
 [node name="secondDesc" type="RichTextLabel" parent="dropdownDescriptions"]
 material = SubResource("ShaderMaterial_ervhw")
 layout_mode = 0
-offset_left = 380.0
+offset_left = 375.0
 offset_top = 280.0
-offset_right = 580.0
+offset_right = 575.0
 offset_bottom = 339.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   the second one[/tornado]"
+text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   the second one[/tornado][/center]"
 scroll_active = false
 
 [node name="roundtoDesc" type="RichTextLabel" parent="dropdownDescriptions"]
-visible = false
 material = SubResource("ShaderMaterial_m4uvf")
 layout_mode = 0
-offset_left = 175.0
+offset_left = 165.0
 offset_top = 400.0
-offset_right = 425.0
+offset_right = 415.0
 offset_bottom = 444.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  round to this decimal[/tornado]"
+text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  round to this decimal[/tornado][/center]"
 fit_content = true
 scroll_active = false
 
@@ -792,17 +832,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -202.747
-offset_top = -75.29
+offset_top = -112.5
 offset_right = 245.263
-offset_bottom = 143.845
+offset_bottom = 106.635
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("4_42sig")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "- app by deaen 
+text = "- app by deaen
+- mod by epixium
 - made with godot 
 
 
@@ -811,10 +853,10 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="godotLogo" type="TextureRect" parent="settingsWindow"]
-offset_left = 358.195
-offset_top = 112.835
-offset_right = 400.196
-offset_bottom = 154.835
+offset_left = 355.0
+offset_top = 130.0
+offset_right = 397.001
+offset_bottom = 172.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("15_t62kx")
 
@@ -835,7 +877,7 @@ text = "song:  DEAF KEV - Invincible"
 
 [node name="cupan" type="Sprite2D" parent="settingsWindow"]
 texture_filter = 1
-position = Vector2(312.1, 68.75)
+position = Vector2(305, 32)
 texture = ExtResource("16_6ct3q")
 hframes = 3
 
@@ -843,6 +885,12 @@ hframes = 3
 libraries = {
 "": SubResource("AnimationLibrary_sien5")
 }
+
+[node name="epixium" type="AnimatedSprite2D" parent="settingsWindow"]
+position = Vector2(350, 88)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_y4d72")
+animation = &"idle"
 
 [node name="dropTimer" type="Timer" parent="."]
 wait_time = 1.78

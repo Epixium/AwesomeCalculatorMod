@@ -20,6 +20,7 @@ extends Window
 
 @export var colorRect:ColorRect
 @export var cupanAnim:AnimationPlayer
+@export var epixiumAnim:AnimatedSprite2D
 var resultText:String
 @export var resultsRichLabel:RichTextLabel
 
@@ -171,6 +172,7 @@ func _on_roundto_item_selected(index):
 func _on_settings_btn_pressed():
 	settingsWindow.show()
 	cupanAnim.play("idle")
+	epixiumAnim.play("idle")
 	creditsButton.grab_focus()
 
 func _on_settings_window_close_requested():
@@ -248,10 +250,10 @@ func reset():
 	if evilMode == true:
 		$"titleText".text = "[rainbow freq=0.3 sat=0.9 val=1][center][wave amp=50.0 freq=5.0 connected=1]EVIL
 calculator mod[/wave][/center][/rainbow]"
-		$"dropdownDescriptions/firstDesc".text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   EVIL number[/tornado]"
-		$"dropdownDescriptions/secondDesc".text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   the SLY one[/tornado]"
-		$"dropdownDescriptions/operatorDesc".text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  SINISTER operator[/tornado]"
-		$"dropdownDescriptions/roundtoDesc".text = "[tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  round to this DASTARDLY decimal[/tornado]"
+		$"dropdownDescriptions/firstDesc".text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   EVIL number[/tornado][/center]"
+		$"dropdownDescriptions/secondDesc".text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]   the SLY one[/tornado][/center]"
+		$"dropdownDescriptions/operatorDesc".text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  SINISTER operator[/tornado][/center]"
+		$"dropdownDescriptions/roundtoDesc".text = "[center][tornado radius=1.0 freq=20.0][img=25]res://assets/indexfinger.png[/img]  round to this DASTARDLY decimal[/tornado][/center]"
 	
 func _on_back_button_pressed():
 	reset()

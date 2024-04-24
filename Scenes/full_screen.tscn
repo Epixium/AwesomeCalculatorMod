@@ -45,3 +45,8 @@ layout_mode = 2
 texture_normal = ExtResource("5_0nfmg")
 windowScene = "res://Scenes/modded_window.tscn"
 iconName = "awesome calculator mod"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
